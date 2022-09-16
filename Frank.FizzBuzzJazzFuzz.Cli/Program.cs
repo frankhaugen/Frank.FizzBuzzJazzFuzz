@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
 
 var stopwatch = Stopwatch.StartNew();
-var fizzbuzzRunner = new FizzBuzzRunner();
+var fizzbuzzRunner = new LegacyFizzBuzzRunner();
 var result = fizzbuzzRunner.Run(100_000_000);
 
 Console.WriteLine($"{result.Count.ToString("N")} Iterations, ran for {stopwatch.Elapsed.ToString("g")} seconds and uses {(GC.GetGCMemoryInfo().TotalCommittedBytes / 1024 / 1024).ToString("##,### MB")} RAM");

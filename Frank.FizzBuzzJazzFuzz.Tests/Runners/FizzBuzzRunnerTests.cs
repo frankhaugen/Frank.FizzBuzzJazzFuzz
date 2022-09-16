@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
 
-namespace Frank.FizzBuzzJazzFuzz.Tests;
+namespace Frank.FizzBuzzJazzFuzz.Tests.Runners;
 
 public class FizzBuzzRunnerTests
 {
@@ -11,7 +11,7 @@ public class FizzBuzzRunnerTests
     public void Run_StateUnderTest_ExpectedBehavior(uint maxIterations, string assertionFilePath)
     {
         // Arrange
-        var fizzBuzzRunner = new FizzBuzzRunner();
+        var fizzBuzzRunner = new LegacyFizzBuzzRunner();
         var expected = File.ReadAllLines(assertionFilePath);
 
         // Act

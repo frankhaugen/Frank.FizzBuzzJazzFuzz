@@ -1,9 +1,12 @@
-﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz;
+﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
 
-public class FizzBuzzRunner
+/// <summary>
+/// OBSOLETE - Only kept for posterity's sake
+/// </summary>
+public class LegacyFizzBuzzRunner
 {
     /// <summary>
-    /// Runs the familiar FizzBuzz-Scenario from 1 up to max interation-count
+    /// Runs the familiar FizzBuzz-Scenario from 1 up to max iteration-count
     /// </summary>
     /// <param name="maxIterations"></param>
     /// <returns>A list of strings for output</returns>
