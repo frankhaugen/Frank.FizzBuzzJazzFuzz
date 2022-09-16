@@ -1,6 +1,6 @@
-﻿using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+﻿using Frank.FizzBuzzJazzFuzz.Models;
 
-namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Extensions;
+namespace Frank.FizzBuzzJazzFuzz.Extensions;
 
 public static class RuleExtensions
 {

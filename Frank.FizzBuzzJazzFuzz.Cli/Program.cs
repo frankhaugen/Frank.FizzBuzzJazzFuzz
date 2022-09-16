@@ -1,7 +1,7 @@
 ﻿//var result = typeof(IRules).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(RulesBase))).Select(x => x.Name);
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+using Frank.FizzBuzzJazzFuzz.Models;
+using Frank.FizzBuzzJazzFuzz.Rules;
 
 var rules = new FizzBuzzRules();
 var result = rules.RunRules(new UintRange(1, 100));

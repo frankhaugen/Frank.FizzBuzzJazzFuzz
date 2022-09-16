@@ -1,8 +1,7 @@
 ﻿using FluentAssertions;
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+using Frank.FizzBuzzJazzFuzz.Models;
+using Frank.FizzBuzzJazzFuzz.Rules;
 
 namespace Frank.FizzBuzzJazzFuzz.Tests;
 

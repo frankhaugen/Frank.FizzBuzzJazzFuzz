@@ -1,9 +1,9 @@
 ﻿using System.Text;
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Extensions;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+using Frank.FizzBuzzJazzFuzz.Extensions;
+using Frank.FizzBuzzJazzFuzz.Models;
 
-namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+namespace Frank.FizzBuzzJazzFuzz.Rules;
 
 public abstract class RulesBase : IRules
 {

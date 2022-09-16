@@ -1,6 +1,6 @@
-﻿using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+﻿using Frank.FizzBuzzJazzFuzz.Models;
 
-namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+namespace Frank.FizzBuzzJazzFuzz.Rules;
 
 /// <summary>
 /// A set of rules that use the standard FizzBuzz rules

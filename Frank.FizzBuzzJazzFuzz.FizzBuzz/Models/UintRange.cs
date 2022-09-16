@@ -1,4 +1,4 @@
-﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+﻿namespace Frank.FizzBuzzJazzFuzz.Models;
 
 /// <summary>
 /// A range of numbers that can never be negative

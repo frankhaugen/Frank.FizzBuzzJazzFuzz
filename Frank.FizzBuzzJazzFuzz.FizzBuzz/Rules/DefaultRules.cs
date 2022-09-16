@@ -1,4 +1,4 @@
-﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+﻿namespace Frank.FizzBuzzJazzFuzz.Rules;
 
 /// <summary>
 /// No rules applied

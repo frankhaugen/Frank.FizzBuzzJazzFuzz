@@ -1,4 +1,4 @@
-﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+﻿namespace Frank.FizzBuzzJazzFuzz.Models;
 
 /// <summary>
 /// A rule is expected to define what some integer is divided with ends up with a whole number

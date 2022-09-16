@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32728.150
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.FizzBuzzJazzFuzz.FizzBuzz", "Frank.FizzBuzzJazzFuzz.FizzBuzz\Frank.FizzBuzzJazzFuzz.FizzBuzz.csproj", "{D3618E10-EBC4-4B0A-84C2-98C41E322AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.FizzBuzzJazzFuzz", "Frank.FizzBuzzJazzFuzz.FizzBuzz\Frank.FizzBuzzJazzFuzz.csproj", "{D3618E10-EBC4-4B0A-84C2-98C41E322AA4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.FizzBuzzJazzFuzz.Tests", "Frank.FizzBuzzJazzFuzz.Tests\Frank.FizzBuzzJazzFuzz.Tests.csproj", "{ED4C5491-28CB-40E7-9085-C99B06BD2B78}"
 EndProject

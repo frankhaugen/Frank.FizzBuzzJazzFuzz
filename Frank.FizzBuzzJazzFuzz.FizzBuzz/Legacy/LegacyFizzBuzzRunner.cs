@@ -1,4 +1,4 @@
-﻿namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
+﻿namespace Frank.FizzBuzzJazzFuzz.Legacy;
 
 /// <summary>
 /// OBSOLETE - Only kept for posterity's sake

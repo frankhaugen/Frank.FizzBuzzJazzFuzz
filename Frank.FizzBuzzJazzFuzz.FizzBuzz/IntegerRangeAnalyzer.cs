@@ -1,7 +1,7 @@
-﻿using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
+﻿using Frank.FizzBuzzJazzFuzz.Models;
+using Frank.FizzBuzzJazzFuzz.Rules;
 
-namespace Frank.FizzBuzzJazzFuzz.FizzBuzz;
+namespace Frank.FizzBuzzJazzFuzz;
 
 /// <summary>
 /// An analyzer to analyze a range of integers against the rules configured
