@@ -8,7 +8,7 @@ namespace Frank.FizzBuzzJazzFuzz.Tests;
 public class IntegerRangeAnalyzerTests
 {
     [Fact]
-    public void Analyze_Instance()
+    public void AnalyzeFizzBuzz_Instance()
     {
         // Arrange
         var integerRangeAnalyzer = new IntegerRangeAnalyzer(new FizzBuzzRules());
@@ -23,7 +23,7 @@ public class IntegerRangeAnalyzerTests
     }
 
     [Fact]
-    public void Analyze_Static()
+    public void AnalyzeFizzBuzz_Static()
     {
         // Arrange
         var rules = new FizzBuzzRules();
