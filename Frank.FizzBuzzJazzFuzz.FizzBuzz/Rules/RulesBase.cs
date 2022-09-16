@@ -1,26 +1,27 @@
 ﻿using System.Text;
 
 using Frank.FizzBuzzJazzFuzz.FizzBuzz.Extensions;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
 
-namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+namespace Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
-public abstract class RuleSet : IRuleSet
+public abstract class RulesBase : IRules
 {
     private readonly List<Rule> _rules = new();
 
-    public IRuleSet AddRule(Rule rule)
+    public IRules AddRule(Rule rule)
     {
         _rules.Add(rule);
         return this;
     }
 
-    public IRuleSet RemoveRule(Rule rule)
+    public IRules RemoveRule(Rule rule)
     {
         _rules.Remove(rule);
         return this;
     }
 
-    public IRuleSet FlushRules()
+    public IRules FlushRules()
     {
         _rules.Clear();
         return this;

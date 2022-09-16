@@ -1,12 +1,13 @@
 ﻿using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 namespace Frank.FizzBuzzJazzFuzz.FizzBuzz;
 
 public class RuleSetRunner
 {
-    private readonly IRuleSet _ruleSet;
+    private readonly IRules _ruleSet;
 
-    public RuleSetRunner(IRuleSet ruleSet)
+    public RuleSetRunner(IRules ruleSet)
     {
         _ruleSet = ruleSet;
     }

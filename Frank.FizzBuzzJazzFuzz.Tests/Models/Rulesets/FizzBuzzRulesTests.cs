@@ -2,7 +2,7 @@
 
 using Frank.FizzBuzzJazzFuzz.FizzBuzz.Extensions;
 using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models.Rulesets;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 using Xunit.Abstractions;
 

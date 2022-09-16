@@ -2,57 +2,56 @@
 
 using Frank.FizzBuzzJazzFuzz.FizzBuzz;
 using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models.Rulesets;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 using Xunit.Abstractions;
 
-namespace Frank.FizzBuzzJazzFuzz.Tests.Runners
+namespace Frank.FizzBuzzJazzFuzz.Tests.Runners;
+
+public class RuleSetRunnerTests
 {
-    public class RuleSetRunnerTests
+    private readonly ITestOutputHelper _outputHelper;
+
+    public RuleSetRunnerTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+    [Fact]
+    public void Run_Ascending_ExpectedBehavior()
     {
-        private readonly ITestOutputHelper _outputHelper;
+        // Arrange
+        var rules = new DefaultRules()
+            .AddRule(new Rule(3, "Fizz"))
+            .AddRule(new Rule(5, "Buzz"));
 
-        public RuleSetRunnerTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+        var ruleSetRunner = new RuleSetRunner(rules);
+        var expected = File.ReadAllLines("Files/fizzbuzz.txt");
+        var range = new UintRange(1, 100);
 
-        [Fact]
-        public void Run_Ascending_ExpectedBehavior()
-        {
-            // Arrange
-            var rules = new DefaultRules()
-                .AddRule(new Rule(3, "Fizz"))
-                .AddRule(new Rule(5, "Buzz"));
+        // Act
+        var result = ruleSetRunner.Run(range);
 
-            var ruleSetRunner = new RuleSetRunner(rules);
-            var expected = File.ReadAllLines("Files/fizzbuzz.txt");
-            var range = new UintRange(1, 100);
+        // Assert
+        _outputHelper.WriteLine(string.Join("\n", result));
+        result.Should().Equal(expected);
+    }
 
-            // Act
-            var result = ruleSetRunner.Run(range);
+    [Fact]
+    public void Run_Descending_ExpectedBehavior()
+    {
+        // Arrange
+        var rules = new DefaultRules()
+            .AddRule(new Rule(3, "Fizz"))
+            .AddRule(new Rule(5, "Buzz"));
 
-            // Assert
-            _outputHelper.WriteLine(string.Join("\n", result));
-            result.Should().Equal(expected);
-        }
+        var ruleSetRunner = new RuleSetRunner(rules);
+        var expected = File.ReadAllLines("Files/fizzbuzz.txt");
+        var range = new UintRange(100, 1);
 
-        [Fact]
-        public void Run_Descending_ExpectedBehavior()
-        {
-            // Arrange
-            var rules = new DefaultRules()
-                .AddRule(new Rule(3, "Fizz"))
-                .AddRule(new Rule(5, "Buzz"));
+        // Act
+        var result = ruleSetRunner.Run(range);
 
-            var ruleSetRunner = new RuleSetRunner(rules);
-            var expected = File.ReadAllLines("Files/fizzbuzz.txt");
-            var range = new UintRange(100, 1);
-
-            // Act
-            var result = ruleSetRunner.Run(range);
-
-            // Assert
-            _outputHelper.WriteLine(string.Join("\n", result));
-            result.Reverse();
-            result.Should().Equal(expected);
-        }
+        // Assert
+        _outputHelper.WriteLine(string.Join("\n", result));
+        result.Reverse();
+        result.Should().Equal(expected);
     }
 }
