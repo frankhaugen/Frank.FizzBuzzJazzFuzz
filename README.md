@@ -19,4 +19,21 @@ I have not followed any "patterns", as in I have used what is my customary way o
 I do recognize that SOLID is a thing that was referenced in the "tasking" but I never bother to actually look "is my code SOLID", and in the case of this kind of application parts of it isn't really applicable.
 
 ### Testing
-The task said that testing wasn't important but I disagree, as it's much quicker to run tests then it is to debug. I Haven't done TDD here but I should have
+The task said that testing wasn't important but I disagree, as it's much quicker to run tests then it is to debug. I Haven't done TDD here but I should have since I was given files that had the "solution"
+
+### Concepts
+I did make the "traditional" FizzBuzz logic, but I have never liked that way of making it, so I was always intending to have a FizzBuzz that based itself on the concept of "rules" so it's configurable and extendable, but I did "cheat" bu solving task 2 through making the logic able to handle both incremental and decremental ranges of numbers
+
+The idea is to have a set of "builtin" rules that can be used and modified, (one is an empty set of rules, so it's possible to make ones own without changing the source code), and in theory at runtime, (but some sort of UI needs to exist), I have contemplated defining the rules in Json aswell.
+
+There are more than one way to implement the FizzBuzz rules, but that's just for convenience, because a good way to abstract the result (meaning that it's trivaial to mock in a test), is something I try to have in all code I write.
+
+### Future improvements
+#### Access
+As of now I have everything defined as `public` but using `internal` and then `InternalsVisibleToAttribute` to make the business logic as self-contained as possible but it makes the code a bit visually repulisive so many see it as an anti-pattern
+
+#### Rules
+The actual calculation that is used to validate rules isn't configurable, but should be
+
+#### Performance
+There's a lot of memory-waste that could be treated better, also the code is not parallelled, which it could easily become
