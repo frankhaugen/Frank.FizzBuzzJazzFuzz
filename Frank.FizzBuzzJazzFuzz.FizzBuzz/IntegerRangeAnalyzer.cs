@@ -3,34 +3,27 @@ using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 namespace Frank.FizzBuzzJazzFuzz.FizzBuzz;
 
+/// <summary>
+/// An analyzer to analyze a range of integers against the rules configured
+/// </summary>
 public class IntegerRangeAnalyzer
 {
-    private readonly IRules _ruleSet;
+    private readonly IRules _rules;
 
-    public IntegerRangeAnalyzer(IRules ruleSet)
-    {
-        _ruleSet = ruleSet;
-    }
+    public IntegerRangeAnalyzer(IRules rules) => _rules = rules;
 
-    public List<string> Run(UintRange range)
-    {
-        var output = new List<string>();
+    /// <summary>
+    /// Analyze range
+    /// </summary>
+    /// <param name="range"></param>
+    /// <returns></returns>
+    public List<string> Analyze(UintRange range) => _rules.RunRules(range);
 
-        if (range.Start < range.End)
-        {
-            for (var i = range.Start; i <= range.End; i++)
-            {
-                output.Add(_ruleSet.RunRules(i));
-            }
-        }
-        else if (range.Start > range.End)
-        {
-            for (var i = range.Start; i >= range.End; i--)
-            {
-                output.Add(_ruleSet.RunRules(i));
-            }
-        }
-
-        return output;
-    }
+    /// <summary>
+    /// Analyze a range using supplied rules
+    /// </summary>
+    /// <param name="rules"></param>
+    /// <param name="range"></param>
+    /// <returns></returns>
+    public static List<string> Analyze(IRules rules, UintRange range) => rules.RunRules(range);
 }

@@ -29,9 +29,25 @@ public abstract class RulesBase : IRules
 
     public string RunRules(uint value)
     {
+        if (value == 0) return value.ToString();
         var stringBuilder = new StringBuilder();
         foreach (var rule in _rules) stringBuilder.Append(rule.RunRule(value));
         if (stringBuilder.Length == 0) stringBuilder.Append(value.ToString());
         return stringBuilder.ToString();
+    }
+
+    public List<string> RunRules(UintRange range)
+    {
+        var output = new List<string>();
+
+        if (range.Start <= range.End)
+            for (var i = range.Start; i <= range.End; i++)
+                output.Add(RunRules(i));
+
+        else if (range.Start >= range.End)
+            for (var i = range.Start; i >= range.End; i--)
+                output.Add(RunRules(i));
+
+        return output;
     }
 }

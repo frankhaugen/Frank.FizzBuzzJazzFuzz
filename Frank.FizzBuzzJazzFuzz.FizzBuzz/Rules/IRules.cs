@@ -8,4 +8,5 @@ public interface IRules
     IRules RemoveRule(Rule rule);
     IRules FlushRules();
     string RunRules(uint value);
+    List<string> RunRules(UintRange range);
 }
