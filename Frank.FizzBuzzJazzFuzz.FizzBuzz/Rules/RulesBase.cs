@@ -21,12 +21,6 @@ public abstract class RulesBase : IRules
         return this;
     }
 
-    public IRules FlushRules()
-    {
-        _rules.Clear();
-        return this;
-    }
-
     public string RunRules(uint value)
     {
         if (value == 0) return value.ToString();

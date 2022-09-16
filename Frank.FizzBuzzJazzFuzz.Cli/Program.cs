@@ -1,18 +1,11 @@
-﻿using System.Diagnostics;
+﻿//var result = typeof(IRules).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(RulesBase))).Select(x => x.Name);
 
-using Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Models;
+using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
-var stopwatch = Stopwatch.StartNew();
-var fizzbuzzRunner = new LegacyFizzBuzzRunner();
-var result = fizzbuzzRunner.Run(100_000_000);
+var rules = new FizzBuzzRules();
+var result = rules.RunRules(new UintRange(1, 100));
 
-Console.WriteLine($"{result.Count.ToString("N")} Iterations, ran for {stopwatch.Elapsed.ToString("g")} seconds and uses {(GC.GetGCMemoryInfo().TotalCommittedBytes / 1024 / 1024).ToString("##,### MB")} RAM");
-stopwatch.Stop();
-Console.ReadLine();
-stopwatch.Start();
-result.ForEach(Console.WriteLine);
-
-Console.WriteLine($"Total time spent: {stopwatch.Elapsed:g}");
-Console.WriteLine($"Hit RETURN to close...");
+Console.WriteLine(string.Join("\n", result));
 
 Console.ReadLine();
