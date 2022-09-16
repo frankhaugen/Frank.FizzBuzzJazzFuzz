@@ -3,11 +3,11 @@ using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 namespace Frank.FizzBuzzJazzFuzz.FizzBuzz;
 
-public class RuleSetRunner
+public class IntegerRangeAnalyzer
 {
     private readonly IRules _ruleSet;
 
-    public RuleSetRunner(IRules ruleSet)
+    public IntegerRangeAnalyzer(IRules ruleSet)
     {
         _ruleSet = ruleSet;
     }

@@ -2,7 +2,7 @@
 
 using Frank.FizzBuzzJazzFuzz.FizzBuzz.Legacy;
 
-namespace Frank.FizzBuzzJazzFuzz.Tests.Runners;
+namespace Frank.FizzBuzzJazzFuzz.Tests.Models.Runners;
 
 public class FizzBuzzRunnerTests
 {

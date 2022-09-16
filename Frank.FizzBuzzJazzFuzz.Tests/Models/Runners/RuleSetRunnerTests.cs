@@ -6,7 +6,7 @@ using Frank.FizzBuzzJazzFuzz.FizzBuzz.Rules;
 
 using Xunit.Abstractions;
 
-namespace Frank.FizzBuzzJazzFuzz.Tests.Runners;
+namespace Frank.FizzBuzzJazzFuzz.Tests.Models.Runners;
 
 public class RuleSetRunnerTests
 {
@@ -22,7 +22,7 @@ public class RuleSetRunnerTests
             .AddRule(new Rule(3, "Fizz"))
             .AddRule(new Rule(5, "Buzz"));
 
-        var ruleSetRunner = new RuleSetRunner(rules);
+        var ruleSetRunner = new IntegerRangeAnalyzer(rules);
         var expected = File.ReadAllLines("Files/fizzbuzz.txt");
         var range = new UintRange(1, 100);
 
@@ -42,7 +42,7 @@ public class RuleSetRunnerTests
             .AddRule(new Rule(3, "Fizz"))
             .AddRule(new Rule(5, "Buzz"));
 
-        var ruleSetRunner = new RuleSetRunner(rules);
+        var ruleSetRunner = new IntegerRangeAnalyzer(rules);
         var expected = File.ReadAllLines("Files/fizzbuzz.txt");
         var range = new UintRange(100, 1);
 
