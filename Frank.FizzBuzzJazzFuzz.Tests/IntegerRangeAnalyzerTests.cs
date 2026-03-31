@@ -1,14 +1,26 @@
-﻿using FluentAssertions;
+﻿using System.Numerics;
+
+using FluentAssertions;
 
 using Frank.FizzBuzzJazzFuzz.Models;
 using Frank.FizzBuzzJazzFuzz.Rules;
 
 namespace Frank.FizzBuzzJazzFuzz.Tests;
 
+public static class MathConstants
+{
+    public static Single Deg2Rad = 0.01745329f;
+}
+
+public static class MathExtensions
+{
+    public static T Deg2Rad<T>(this T source) where T : class, INumber<T> => source * (MathConstants.Deg2Rad as T);
+}
+
 public class IntegerRangeAnalyzerTests
 {
     [Fact]
-    public void Analyze_Instance()
+    public void AnalyzeFizzBuzz_Instance()
     {
         // Arrange
         var integerRangeAnalyzer = new IntegerRangeAnalyzer(new FizzBuzzRules());
@@ -23,7 +35,7 @@ public class IntegerRangeAnalyzerTests
     }
 
     [Fact]
-    public void Analyze_Static()
+    public void AnalyzeFizzBuzz_Static()
     {
         // Arrange
         var rules = new FizzBuzzRules();
