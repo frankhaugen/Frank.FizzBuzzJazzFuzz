@@ -33,7 +33,7 @@ public abstract class RulesBase : IRules
     public List<string> RunRules(UintRange range)
     {
         var output = new List<string>();
-
+        var input = Enumerable.Range((int)range.Start, (int)range.End).Reverse();
         if (range.Start <= range.End)
             for (var i = range.Start; i <= range.End; i++)
                 output.Add(RunRules(i));

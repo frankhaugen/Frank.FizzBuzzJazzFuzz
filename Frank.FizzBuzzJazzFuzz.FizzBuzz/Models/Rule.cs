@@ -6,3 +6,5 @@
 /// <param name="Divisor">What the integer value will be attempted to be divided with</param>
 /// <param name="Text">The text that will replace the integer value if the rule is "true"</param>
 public readonly record struct Rule(uint Divisor, string Text);
+
+public readonly record struct RuleV2(Func<uint, uint, bool> Calculation, string Text);
