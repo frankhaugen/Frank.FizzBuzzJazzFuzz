@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Frank.FizzBuzzJazzFuzz.Cli/Frank.FizzBuzzJazzFuzz.Cli.csproj" />
+  <Project Path="Frank.FizzBuzzJazzFuzz.FizzBuzz/Frank.FizzBuzzJazzFuzz.csproj" />
+  <Project Path="Frank.FizzBuzzJazzFuzz.Tests/Frank.FizzBuzzJazzFuzz.Tests.csproj" />
+</Solution>
